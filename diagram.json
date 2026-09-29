@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Gabriel",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -140, "left": 30, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 200, "left": 180, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": 20, "left": -110, "attrs": { "color": "red" } },
+    { "type": "wokwi-resistor", "id": "r1", "top": 120, "left": -140, "rotate": 90, "attrs": { "value": "220" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "pir1:VCC", "esp:3V3", "red", [] ],
+    [ "pir1:GND", "esp:GND.2", "black", [] ],
+    [ "pir1:OUT", "esp:27", "green", [] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [] ],
+    [ "ldr1:GND", "esp:GND.2", "black", [] ],
+    [ "ldr1:AO", "esp:34", "orange", [] ],
+    [ "led1:A", "esp:2", "blue", [] ],
+    [ "led1:C", "r1:1", "black", [] ],
+    [ "r1:2", "esp:GND.1", "black", [] ]
+  ],
+  "dependencies": {}
+}
