@@ -1,8 +1,5 @@
 # ENTREGA — Sensor de Sala (IoT)
 
-**Aluno:** Gabriel
-**Disciplina:** IoT — Prof. Leonam V. Hemann
-
 ## Links
 
 - **URL do Worker:** https://sensor-sala.gabee-roggia.workers.dev
@@ -104,7 +101,7 @@ No módulo LDR do Wokwi, **mais luz = leitura menor**. `LIMIAR_LUZ = 2000` (pont
 - **R3 — LED:** aceso enquanto ocupada (30 s após o último movimento, reiniciando a cada movimento); piscando quando a sala está vazia e a luz acesa há mais de 60 s; apagado caso contrário. Tudo com `millis()`, sem `delay()` longo.
 - **HTTPS:** `WiFiClientSecure` com `client.setInsecure()` passado ao `HTTPClient`.
 
-## Resultado do teste (29/09/2026)
+## Resultado do teste
 
 Serial Monitor (trecho):
 
